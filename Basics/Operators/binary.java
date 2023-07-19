@@ -9,16 +9,16 @@ public class binary {
     public static void main(String[] args) {
         int x = 100 + 50;
         double y = 9.99;
-        
-        System.out.println(x+y);
-        System.out.println(y-x);
-        System.out.println(x*y);
-        System.out.println(x/y);
-        System.out.println(x%y);
+
+        System.out.println(x + y);
+        System.out.println(y - x);
+        System.out.println(x * y);
+        System.out.println(x / y);
+        System.out.println(x % y);
 
         // When ints are worked on, the result drops the decimal
-        System.out.println(11/3);
-        System.out.println(11/3.0);
+        System.out.println(11 / 3);
+        System.out.println(11 / 3.0);
 
         /*
          * Assignment operators
@@ -27,6 +27,6 @@ public class binary {
         int a = 10;
         a %= 3;
         System.out.println(a);
-    } 
-    
+    }
+
 }

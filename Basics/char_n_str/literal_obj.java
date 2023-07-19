@@ -20,7 +20,6 @@ public class literal_obj {
         String txt2 = new String("This is \"Java\"");
         System.out.println(txt2);
 
-
         String literal1 = "zxcv";
         String literal2 = "zxcv";
         String objStr1 = new String("zxcv");
@@ -28,8 +27,6 @@ public class literal_obj {
 
         System.out.println(literal1 == literal2);
         System.out.println(objStr1 == objStr2); // False cuz 2 objects
-        
-        
 
     }
 }

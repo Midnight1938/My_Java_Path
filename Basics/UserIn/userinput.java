@@ -23,7 +23,7 @@ public class userinput {
          * But we dont have a way to have definite input yet!
          * Because its looking for an Enter to take the input buffer
          */
-        //! scan.nextLine(); // Will clear the buffer for nect
+        // ! scan.nextLine(); // Will clear the buffer for nect
 
         System.out.printf("%d is young, Im 900! How alive do you feel? ", age);
         String livid = scan.nextLine();

@@ -12,14 +12,13 @@ public class parsing {
         System.out.println(name.isEmpty());
         System.out.println(name.toUpperCase());
         System.out.println(name.toLowerCase());
-        
+
         System.out.println(name.replace("Tumbleweed", "Leap"));
         System.out.println(name); // Doesnt change the original
-        
+
         System.out.println(name.contains("Suse"));
         System.out.println("");
 
-        
         // There are ways to compare objects
         String objStr1 = new String("zxcv");
         String objStr2 = new String("zxcv");
@@ -28,7 +27,6 @@ public class parsing {
         objStr2 = "ZXCV";
         System.out.println(objStr1.equalsIgnoreCase(objStr2));
 
-
     }
-    
+
 }

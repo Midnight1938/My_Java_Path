@@ -31,7 +31,7 @@ public class arrais {
         Arrays.sort(vowels, 1, 4);
         System.out.println(Arrays.toString(vowels));
 
-        //* We can also do key searches
+        // * We can also do key searches
         char key = 'i';
         System.out.println(Arrays.binarySearch(bttr_vowels, key));
         // Theres also a range search
@@ -42,7 +42,7 @@ public class arrais {
         Arrays.fill(bttr_vowels, 'a');
         System.out.println(Arrays.toString(bttr_vowels));
 
-        //* We can also copy arrays, obviously ranges can be used
+        // * We can also copy arrays, obviously ranges can be used
         char copy_vowels[] = bttr_vowels;
         System.out.println(Arrays.toString(copy_vowels));
         // Like in python, using = will just make a reference to the same array
@@ -59,6 +59,6 @@ public class arrais {
 
         // We can also compare arrays, a normal == will not work
         System.out.println(Arrays.equals(bttr_vowels, clone_vowl));
-   
+
     }
 }
