@@ -2,6 +2,17 @@ package Basics.Conditions;
 
 import java.util.Scanner;
 
+/*
+ * A function in java is similar to a function in C++
+ * And we see the use of switch case and ifelse in java
+ * Most conditions are similar to C++, while, if, else, switch, case, etc.
+ * But there are some differences, like the use of .equals() instead of ==
+ * Also, the use of .nextLine() instead of cin
+ * And the use of .parseDouble() instead of stoi
+ 
+ * But that is the extent of it so we carry on
+ */
+
 public class basic_calc {
     public static void main(String[] args) {
         Scanner scanDt = new Scanner(System.in);
