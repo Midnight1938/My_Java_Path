@@ -51,7 +51,7 @@ public class basic_calc {
             case "mul":
                 System.out.printf("%f * %f = %f", num1, num2, num1 * num2);
                 break;
-            case "div":
+            case "div": // Also check for zero division
                 if (num2 == 0) {
                     System.out.println("Cannot divide by zero");
                 } else {
