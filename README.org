@@ -1,4 +1,30 @@
 #+title: My_Java_Path
 #+date: 19-07-23
 
-* 
+* Learning the Basics of java for College
+Thank FreeCodeCamp.org for the [[https:youtube.com/watch?v=A74TOX803D0][free course on youtube]]
+** File
++ Basics
+  - hello.java
+  - casting_nums.java
+  - varibs.java
+  - char_n_str
+    1) literal_obj.java
+    2) manipulation.java
+    3) parsing.java
+  - Conditions
+    1) calkulate.java
+  - Operators
+    1) binary.java
+    2) relational.java
+    3) unary.java
+  - UserIn
+    1) parseinput.java
+    2) userinput.java
+
+* Java Basics
+** What is Java?
+- Java is a programming language and a platform.
+- Java is a high level, robust, object-oriented and secure programming language.
+- Platform: Any hardware or software environment in which a program runs, is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.
+
