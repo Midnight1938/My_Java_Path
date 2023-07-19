@@ -28,3 +28,7 @@ Thank FreeCodeCamp.org for the [[https:youtube.com/watch?v=A74TOX803D0][free cou
 - Java is a high level, robust, object-oriented and secure programming language.
 - Platform: Any hardware or software environment in which a program runs, is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.
 
+** Super function
+- super() is used to invoke parent class constructor.
+- super can be used to invoke parent class method.
+- More about [[https://www.geeksforgeeks.org/super-keyword/][super]]
