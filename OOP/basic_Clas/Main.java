@@ -1,4 +1,4 @@
-package OOP;
+package OOP.basic_Clas;
 
 import java.time.LocalDate;
 
@@ -8,7 +8,7 @@ import java.time.LocalDate;
  * Classes are like those in C++
  */
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         user u1 = new user();
         u1.name = "Self";

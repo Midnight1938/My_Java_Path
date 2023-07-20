@@ -32,3 +32,11 @@ Thank FreeCodeCamp.org for the [[https:youtube.com/watch?v=A74TOX803D0][free cou
 - super() is used to invoke parent class constructor.
 - super can be used to invoke parent class method.
 - More about [[https://www.geeksforgeeks.org/super-keyword/][super]]
+
+** Final keyword
+- So basically immutable.
+- final keyword can be used in many context. Final can be:
+  - variable
+  - method
+  - class
+- It makes variable constant, method cannot be overridden and class cannot be inherited.
