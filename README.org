@@ -3,24 +3,6 @@
 
 * Learning the Basics of java for College
 Thank FreeCodeCamp.org for the [[https:youtube.com/watch?v=A74TOX803D0][free course on youtube]]
-** File
-+ Basics
-  - hello.java
-  - casting_nums.java
-  - varibs.java
-  - char_n_str
-    1) literal_obj.java
-    2) manipulation.java
-    3) parsing.java
-  - Conditions
-    1) calkulate.java
-  - Operators
-    1) binary.java
-    2) relational.java
-    3) unary.java
-  - UserIn
-    1) parseinput.java
-    2) userinput.java
 
 * Java Basics
 ** What is Java?
@@ -40,3 +22,48 @@ Thank FreeCodeCamp.org for the [[https:youtube.com/watch?v=A74TOX803D0][free cou
   - method
   - class
 - It makes variable constant, method cannot be overridden and class cannot be inherited.
+
+* Files
+** Basics
+1. hello.java
+2. casting_nums.java
+3. varibs.java
+*** char_n_str
+1) literal_obj.java
+2) manipulation.java
+3) parsing.java
+*** Conditions
+1) basic_calc.java
+2) loops.java
+*** Operators
+1) binary.java
+2) relational.java
+3) unary.java
+*** UserIn
+1) parseinput.java
+2) userinput.java
+** Dsa_trix
+1. stax.java
+** Fyling
+1. file.java
+2. file_read.java
+3. art.txt
+4. text.txt
+** OOP
+*** basic_Clas
+1) Main.java
+2) user.java
+*** dice
+1) dice.java
+2) Main.java
+** Socket_chat
+1. Client.java
+2. Server.java
+** Storing
+*** hashmap
+1) hasher.java
+*** Lists_n_arr
+1) arrais.java
+2) array_for.java
+3) wrappers.java
+
