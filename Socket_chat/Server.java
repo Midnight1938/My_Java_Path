@@ -3,24 +3,32 @@ package Socket_chat;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.InputStreamReader;
+
+// Thread imports
+import java.util.concurrent.Executors;
 
 // Logging imports
 import java.io.FileWriter;
 
 /*
  * Runnable interface is used to create a thread that can run in the background and can be used to perform tasks while the main thread is busy.
+ * A thread pool is a collection of threads that can be used to perform tasks in the background.
  */
-public class Server implements Runnable {
+
+
+ public class Server implements Runnable {
 
     private ArrayList<ConnectionHandler> connections; // An ArrayList that is used to store the ConnectionHandler, used
                                                       // to handle the connections of the clients, yes its a class
     private ServerSocket server; // A server socket that is used to accept connections from clients.
 
     private boolean done; // A boolean that is used to check if the server is done.
+    private ExecutorService pool; // A thread pool that is used to create threads.
 
     public Server() { // This is the constructor of the class.
         connections = new ArrayList<>(); // Initializes the ArrayList for the connections.
@@ -32,16 +40,17 @@ public class Server implements Runnable {
         try {
             server = new ServerSocket(9999); // Creates a server socket that will be used to accept
                                              // connections from clients.
+            pool = Executors.newCachedThreadPool(); // Init a thread pool
             while (!done) {
 
                 Socket client = server.accept(); // Accepts the connection from the client.
 
                 ConnectionHandler handler = new ConnectionHandler(client); // Creates a ConnectionHandler object to
-                                                                           // handle
-                // the connection of the client.
+                                                                           // handle the connection of the client.
                 connections.add(handler);
+                pool.execute(handler); // Executes the thread at every new connection.
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             shutdown();
 
         }
@@ -74,7 +83,7 @@ public class Server implements Runnable {
 
     // This class is used to handle the connection of the clients.
     // And it implements the Runnable interface so that it can be used to create a
-    // thread.
+    // thread, this is also an inner class. And an arraylist of this class is used
     class ConnectionHandler implements Runnable {
 
         private Socket client; // A socket that is used to communicate with the client.
@@ -109,7 +118,7 @@ public class Server implements Runnable {
                         logger(nick + " has left the chat");
                         shutdown();
                     } else if (message.startsWith("/nick")) { // Checks if the message starts with /nick
-                        String[] messageSplit = message.split("  ", 2); // Regexes the message to split it into 2 parts
+                        String[] messageSplit = message.split(" ", 2); // Regexes the message to split it into 2 parts
                         if (messageSplit.length == 2) {
                             broadcast(nick + " changed their nick to " + messageSplit[1]);
                             logger(nick + " changed their nick to " + messageSplit[1]);
@@ -162,5 +171,11 @@ public class Server implements Runnable {
         } catch (Exception e) {
             System.out.println("Error writing to log file!");
         }
+    }
+
+
+    public static void main(String[] args) {
+        Server server = new Server(); // Creates the Server object.
+        server.run(); // Runs the server.
     }
 }
