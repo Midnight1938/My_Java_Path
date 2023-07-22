@@ -114,7 +114,7 @@ import java.io.FileWriter;
 
                 String message; // A variable that is used to store the message sent by the client.
                 while ((message = in.readLine()) != null) { // Reads the message sent by the client.
-                    if (message.equals("/exit")) {
+                    if (message.equals("/quit")) {
                         broadcast(nick + " has left the chat");
                         logger(nick + " has left the chat");
                         shutdown();
@@ -165,7 +165,7 @@ import java.io.FileWriter;
             java.sql.Timestamp timestamp = new java.sql.Timestamp(System.currentTimeMillis());
             // Add data to new line
             FileWriter writer = new FileWriter(log, true);
-            writer.write(timestamp + ":::- " + message + "\n"); // \n is last because it will add a new line to the
+            writer.write(timestamp + "\t:::- " + message + "\n"); // \n is last because it will add a new line to the
                                                                 // end of the
             // file
             writer.close();
