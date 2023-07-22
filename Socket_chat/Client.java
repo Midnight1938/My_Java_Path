@@ -18,7 +18,7 @@ public class Client implements Runnable {
     @Override
     public void run() {
         try {
-            Socket client = new Socket("localhost", 9999); // Creates a socket that will be used to connect to the
+            client = new Socket("localhost", 9999); // Creates a socket that will be used to connect to the
                                                            // server.
             out = new PrintWriter(client.getOutputStream(), true); // autoflush means buffer is flushed when line is
                                                                    // written.
