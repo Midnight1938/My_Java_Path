@@ -67,6 +67,7 @@ import java.io.FileWriter;
     public void shutdown() {
         try {
             done = true;
+            pool.shutdown();
             if (!server.isClosed()) { // Checks if the message is not null.
                 server.close();
             }
