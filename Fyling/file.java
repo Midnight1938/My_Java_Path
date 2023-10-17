@@ -52,8 +52,21 @@ public class file {
             case 4:
                 System.out.println("Where do you want to copy the file to?");
                 String newcopy = option.nextLine();
-                filey.renameTo(new File(newcopy));
-                break;
+                // To copy a file you need to create a new file and copy the data from the old
+                // file to the new file
+                File newfile = new File(newcopy);
+                try {
+                    Scanner reader = new Scanner(filey); // Scanner can read files too
+                    FileWriter writer = new FileWriter(newfile);
+                    while (reader.hasNextLine()) {
+                        String data = reader.nextLine();
+                        writer.write(data + "\n");
+                    }
+                    reader.close();
+                    writer.close();
+                } catch (Exception e) {
+                    System.out.println("Error copying file!");
+                }
             case 5:
             System.out.println("Well, it was nice knowing you...");
             break;
